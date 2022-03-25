@@ -1,10 +1,7 @@
 import random
-
 weapon = ["rock", "paper", "scissors"]
-
 player_name = input("What is your name?")
 result = f"I want to play a game, {player_name}."
-
 while True:
     print(result)
     my_weapon = input("Choose your weapon! Rock, paper, or scissors?")
@@ -35,5 +32,9 @@ while True:
     elif comp_weapon == "scissors" and my_weapon == "paper":
         result = "Computer wins! Try again"
         continue
+    elif my_weapon == "quit":
+        result = f"Awww D: Ok, see you later, {player_name}!"
+        print(result)
+        break
     else:
         result = "Weapon not allowed! Bad form!"
